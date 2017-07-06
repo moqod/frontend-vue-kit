@@ -1,6 +1,7 @@
-# frontend-kit
+# frontend-kit [![Awesome](https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg)](https://github.com/sindresorhus/awesome)
 
-> A Vue.js project
+> A Vue.js project | api ([ru](https://ru.vuejs.org/v2/api/), [en](https://vuejs.org/v2/api/))
+
 
 ## Build Setup
 
@@ -33,3 +34,10 @@ For detailed explanation on how things work, checkout the [guide](http://vuejs-t
 
 * [vue-resource](https://github.com/pagekit/vue-resource) - The plugin for Vue.js provides services for making web requests and handle responses using a XMLHttpRequest or JSONP.
 * [less-loader](https://github.com/webpack-contrib/less-loader) - Compiles Less to CSS.
+
+# Vue js component generator
+CLI util for easy generate Vue js component [vgc](https://github.com/NetanelBasal/vue-generate-component/blob/master/README.md)
+##### Change the default file types for html and style
+```bash
+sudo vgc --style less
+```
