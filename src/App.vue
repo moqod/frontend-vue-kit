@@ -1,21 +1,25 @@
 <template>
   <div id="app" class="app">
-    <img
-        src="./assets/img/logo.png"
-        height="200"
-        width="200"
-        alt="logo"
-    >
+    <HeaderBlock></HeaderBlock>
     <div class="main">
       <router-view></router-view>
     </div>
+    <FooterBlock></FooterBlock>
   </div>
 </template>
 
 <script>
-export default {
-  name: 'app'
-};
+  import Header from './components/Header/index';
+  import Footer from './components/Footer/index';
+
+  export default {
+    name: 'app',
+    components: {
+      HeaderBlock: Header,
+      FooterBlock: Footer
+    }
+  };
 </script>
 
 <style src="./App.less" scoped lang="less"></style>
+<style src="./assets/less/core/normalize.css" scoped lang="less"></style>
