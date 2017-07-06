@@ -28,3 +28,8 @@ npm test
 ```
 
 For detailed explanation on how things work, checkout the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+
+# plugins
+
+* [vue-resource](https://github.com/pagekit/vue-resource) - The plugin for Vue.js provides services for making web requests and handle responses using a XMLHttpRequest or JSONP.
+* [less-loader](https://github.com/webpack-contrib/less-loader) - Compiles Less to CSS.
