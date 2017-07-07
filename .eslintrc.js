@@ -24,7 +24,9 @@ module.exports = {
   },
   // add your custom rules here
   'rules': {
-    "comma-dangle": ["error", "never"],
+    'no-console': ['error', { allow: ['warn', 'error', 'log'] }],
+    'arrow-parens': ['error', 'as-needed', { 'requireForBlockBody': true }],
+    'comma-dangle': ['error', {'functions': 'never'}],
     
     // don't require .vue extension when importing
     'import/extensions': ['error', 'always', {

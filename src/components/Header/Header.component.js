@@ -10,7 +10,10 @@ export default  {
     }
   },
   methods: {
-   
+    onLogout($event) {
+      $event.preventDefault();
+      this.$store.dispatch('logoutUser');
+    }
   },
   computed: {
 

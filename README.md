@@ -30,14 +30,16 @@ npm test
 
 For detailed explanation on how things work, checkout the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
 
-# plugins
+# Plugins
 
+* [vue-router](https://github.com/vuejs/vue-router) - documentation ([ru](https://router.vuejs.org/ru/), [en](https://router.vuejs.org/en/))
 * [vue-resource](https://github.com/pagekit/vue-resource) - The plugin for Vue.js provides services for making web requests and handle responses using a XMLHttpRequest or JSONP.
+* [vuex](https://github.com/vuejs/vuex) - Centralized State Management for Vue.js. Documentation ([ru](http://vuex.vuejs.org/ru/), [en](http://vuex.vuejs.org/en/))
 * [less-loader](https://github.com/webpack-contrib/less-loader) - Compiles Less to CSS.
 
 # Vue js component generator
 CLI util for easy generate Vue js component [vgc](https://github.com/NetanelBasal/vue-generate-component/blob/master/README.md)
-##### Change the default file types for html and style
+##### Change the default file types for style
 ```bash
 sudo vgc --style less
 ```
