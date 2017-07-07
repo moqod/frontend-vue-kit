@@ -43,3 +43,7 @@ CLI util for easy generate Vue js component [vgc](https://github.com/NetanelBasa
 ```bash
 sudo vgc --style less
 ```
+
+# DevTools Plugins
+* [Debugging](https://chrome.google.com/webstore/detail/vuejs-devtools/nhdogjmejiglipccpnnnanhbledajbpd)
+* [PerfectPixel](https://chrome.google.com/webstore/detail/perfectpixel-by-welldonec/dkaagdgjmgdmbnecmcefdhjekcoceebi)
