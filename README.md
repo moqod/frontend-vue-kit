@@ -37,6 +37,7 @@ For detailed explanation on how things work, checkout the [guide](http://vuejs-t
 * [vuex](https://github.com/vuejs/vuex) - Centralized State Management for Vue.js. Documentation ([ru](http://vuex.vuejs.org/ru/), [en](http://vuex.vuejs.org/en/))
 * [less-loader](https://github.com/webpack-contrib/less-loader) - Compiles Less to CSS.
 * [raven-js](https://docs.sentry.io/clients/javascript/integrations/vue/) - Sentry’s browser JavaScript SDK.
+* [vue-head](https://github.com/ktquez/vue-head) - Manipulating the meta information of the head tag, a simple and easy way.
 
 # Vue js component generator
 CLI util for easy generate Vue js component [vgc](https://github.com/NetanelBasal/vue-generate-component/blob/master/README.md)
