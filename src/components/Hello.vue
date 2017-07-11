@@ -22,14 +22,25 @@
 </template>
 
 <script>
-export default {
-  name: 'hello',
-  data() {
-    return {
-      msg: 'Welcome to Your Vue.js App'
-    };
-  }
-};
+  export default {
+    name: 'hello',
+    data() {
+      return {
+        msg: 'Welcome to Your Vue.js App'
+      };
+    },
+    head: {
+      title: {
+        inner: 'Frontend-vue-kit',
+        separator: '|',
+        complement: 'Welcome'
+      },
+      // Meta tags
+      meta: [
+        { name: 'Frontend-vue-kit', content: 'Welcome' }
+      ]
+    }
+  };
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
