@@ -1,12 +1,13 @@
 export default  {
   name: 'header',
-  props: [],
+  props: [
+    'phoneNumber'
+  ],
   mounted() {
-    
   },
   data() {
     return {
-      
+
     }
   },
   methods: {
@@ -16,7 +17,6 @@ export default  {
     }
   },
   computed: {
-
   }
 }
 
