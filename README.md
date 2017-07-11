@@ -36,6 +36,7 @@ For detailed explanation on how things work, checkout the [guide](http://vuejs-t
 * [vue-resource](https://github.com/pagekit/vue-resource) - The plugin for Vue.js provides services for making web requests and handle responses using a XMLHttpRequest or JSONP.
 * [vuex](https://github.com/vuejs/vuex) - Centralized State Management for Vue.js. Documentation ([ru](http://vuex.vuejs.org/ru/), [en](http://vuex.vuejs.org/en/))
 * [less-loader](https://github.com/webpack-contrib/less-loader) - Compiles Less to CSS.
+* [raven-js](https://docs.sentry.io/clients/javascript/integrations/vue/) - Sentry’s browser JavaScript SDK.
 
 # Vue js component generator
 CLI util for easy generate Vue js component [vgc](https://github.com/NetanelBasal/vue-generate-component/blob/master/README.md)
