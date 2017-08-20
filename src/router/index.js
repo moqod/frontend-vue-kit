@@ -1,7 +1,8 @@
 import Vue from 'vue';
 import Router from 'vue-router';
 import VueHead from 'vue-head';
-import Hello from '@/components/Hello';
+import Login from '@/pages/Login/index';
+import Main from '@/pages/Main/index';
 
 Vue.use(VueHead);
 Vue.use(Router);
@@ -21,9 +22,14 @@ export default new Router({
   routes: [
     {
       path: '/',
-      name: 'Hello',
-      component: Hello,
+      name: 'Main',
+      component: Main,
       beforeEnter: requireAuth
+    },
+    {
+      path: '/login',
+      name: 'Login',
+      component: Login
     }
   ]
 });

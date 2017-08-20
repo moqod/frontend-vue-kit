@@ -11,7 +11,7 @@ export default {
 
     Vue
       .http
-      .get('manager-profile/')
+      .get('login/')
       .then((response) => {
         if (response.status !== 200) {
           return false;
