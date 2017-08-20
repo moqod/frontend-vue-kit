@@ -19,6 +19,12 @@ export default new Vuex.Store({
   actions,
   getters,
   mutations: {
+    [types.LOADING]() {
+      state.loading = true;
+    },
+    [types.LOADED]() {
+      state.loading = false;
+    },
     [types.SET_AUTHORIZED_TRUE]() {
       state.authorized = true;
     },
