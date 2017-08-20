@@ -4,6 +4,7 @@ import Vue from 'vue';
 import VueResource from 'vue-resource';
 import Raven from 'raven-js';
 import RavenVue from 'raven-js/plugins/vue';
+import './components/Notifications/notifications';
 import App from './App';
 import router from './router';
 import store from './store';
@@ -26,10 +27,17 @@ Vue.http.options.root = process.env.API_HOST;
 Vue.config.productionTip = false;
 
 /* eslint-disable no-new */
-new Vue({
+export default new Vue({
   el: '#app',
   router,
   store,
+  notifications: {
+    showServerError: {
+      title: 'SERVER_ERROR',
+      message: 'Failed to authenticate',
+      type: 'error'
+    }
+  },
   template: '<App/>',
   components: { App }
 });
