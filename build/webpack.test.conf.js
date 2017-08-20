@@ -15,6 +15,8 @@ var webpackConfig = merge(baseConfig, {
     alias: {
       // necessary to to make lang="scss" work in test when using vue-loader's ?inject option 
       // see discussion at https://github.com/vuejs/vue-loader/issues/724
+      'less-loader': 'less-loader',
+      'html-loader': 'html-loader',
       'scss-loader': 'sass-loader',
       'script-loader': 'script-loader'
     }
