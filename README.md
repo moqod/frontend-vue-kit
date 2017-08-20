@@ -38,6 +38,7 @@ For detailed explanation on how things work, checkout the [guide](http://vuejs-t
 * [less-loader](https://github.com/webpack-contrib/less-loader) - Compiles Less to CSS.
 * [raven-js](https://docs.sentry.io/clients/javascript/integrations/vue/) - Sentry’s browser JavaScript SDK.
 * [vue-head](https://github.com/ktquez/vue-head) - Manipulating the meta information of the head tag, a simple and easy way.
+* [vue-notifications](https://github.com/se-panfilov/vue-notifications) - agnostic non-blocking notifications library, that allow you to use notifications in declaration style.
 
 # Vue js component generator
 CLI util for easy generate Vue js component [vgc](https://github.com/NetanelBasal/vue-generate-component/blob/master/README.md)
