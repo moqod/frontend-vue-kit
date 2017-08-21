@@ -3,6 +3,7 @@ import Router from 'vue-router';
 import VueHead from 'vue-head';
 import Login from '@/pages/Login/index';
 import Main from '@/pages/Main/index';
+import SiteStructure from '@/pages/SiteStructure/index';
 
 Vue.use(VueHead);
 Vue.use(Router);
@@ -30,6 +31,11 @@ export default new Router({
       path: '/login',
       name: 'Login',
       component: Login
+    },
+    {
+      path: '/structure',
+      name: 'SiteStructure',
+      component: SiteStructure
     }
   ]
 });

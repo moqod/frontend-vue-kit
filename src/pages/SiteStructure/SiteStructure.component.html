@@ -1,0 +1,15 @@
+<section class="site-structure">
+  {{ siteStructure }}
+  <section v-for="(page, index) in siteStructure.pages">
+    <template v-if="page.empty">
+      <button
+          @click.prevent="onAddPage(page, index)"
+      >
+        {{page.name}}
+      </button>
+    </template>
+    <template v-else>
+      {{page.name}}
+    </template>
+  </section>
+</section>
