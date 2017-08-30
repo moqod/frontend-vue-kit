@@ -1,15 +1,47 @@
 <section class="site-structure">
-  {{ siteStructure }}
-  <section v-for="(page, index) in siteStructure.pages">
-    <template v-if="page.empty">
+  <div class="pages">
+    <div class="pages__add_button">
       <button
-          @click.prevent="onAddPage(page, index)"
+          @click.prevent="onAddPage()"
       >
-        {{page.name}}
+        Add page
       </button>
-    </template>
-    <template v-else>
-      {{page.name}}
-    </template>
-  </section>
+    </div>
+    <div class="page" v-for="(page, index) in siteStructure.pages">
+      <div class="page__item">
+        <input type="text" v-model="page.name" autofocus>
+        <h3>Components:</h3>
+        <section
+            v-for="(component, index) in getPageComponents(page.components)"
+        >
+          <input type="text" readonly v-model="component.name">
+        </section>
+        <Search
+            :data="siteStructure.components"
+            placeholder="Component"
+            trackBy="name"
+            @onSelected="onSelected($event, page)"
+        ></Search>
+      </div>
+      <div class="page__components">
+        <div
+            class="page__component"
+            v-if="!component.empty"
+            v-for="(component, index) in getPageComponents(page.components)"
+        >
+          <input type="text" v-model="component.name" autofocus>
+        </div>
+      </div>
+    </div>
+  </div>
+  <a
+      href="structure.json"
+      ref="download_link"
+      @click="onDownload"
+  >
+    Download structure.json
+  </a>
+  <pre>
+    {{ siteStructure }}
+  </pre>
 </section>

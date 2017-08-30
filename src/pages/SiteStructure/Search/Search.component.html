@@ -1,0 +1,29 @@
+<div class="search">
+  <form @submit.prevent="onSubmit">
+    <input
+        type="text"
+        ref="search"
+        :placeholder="placeholder"
+        @keyup="onKeyup($event)"
+        @keyup.up="onUp($event)"
+        @keyup.down="onDown($event)"
+        @blur="onBlur($event)"
+        @focus="onFocus($event)"
+        v-model="selectedItemName"
+    >
+  </form>
+  <div v-if="showPopup" class="search__popup">
+    <label
+        :for="item.id"
+        v-for="item in foundItems"
+        class="search__popup_item"
+    >
+      <input
+          type="radio"
+          :id="item.id"
+          :checked="item.id === selectedItem.id"
+      />
+      {{item.name}}
+    </label>
+  </div>
+</div>
