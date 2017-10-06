@@ -21,5 +21,5 @@
   };
 </script>
 
-<style src="./App.less" scoped lang="less"></style>
+<style src="./App.style.less" scoped lang="less"></style>
 <style src="./assets/less/core/normalize.css" scoped lang="less"></style>

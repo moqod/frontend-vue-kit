@@ -1,7 +1,6 @@
 export default  {
   name: 'header',
   props: [
-    'phoneNumber'
   ],
   mounted() {
   },
@@ -14,6 +13,10 @@ export default  {
     onLogout($event) {
       $event.preventDefault();
       this.$store.dispatch('logoutUser');
+    },
+    loginUser($event) {
+      $event.preventDefault();
+      this.$store.dispatch('loginUser');
     }
   },
   computed: {
