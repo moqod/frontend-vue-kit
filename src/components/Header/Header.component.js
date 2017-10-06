@@ -1,4 +1,4 @@
-export default  {
+export default {
   name: 'header',
   props: [
   ],
@@ -6,8 +6,7 @@ export default  {
   },
   data() {
     return {
-
-    }
+    };
   },
   methods: {
     onLogout($event) {
@@ -21,4 +20,4 @@ export default  {
   },
   computed: {
   }
-}
+};
