@@ -33,7 +33,7 @@ For detailed explanation on how things work, checkout the [guide](http://vuejs-t
 # Plugins
 
 * [vue-router](https://github.com/vuejs/vue-router) - documentation ([ru](https://router.vuejs.org/ru/), [en](https://router.vuejs.org/en/))
-* [vue-resource](https://github.com/pagekit/vue-resource) - The plugin for Vue.js provides services for making web requests and handle responses using a XMLHttpRequest or JSONP.
+* [axios](https://github.com/axios/axios) - Promise based HTTP client for the browser and node.js
 * [vuex](https://github.com/vuejs/vuex) - Centralized State Management for Vue.js. Documentation ([ru](http://vuex.vuejs.org/ru/), [en](http://vuex.vuejs.org/en/))
 * [less-loader](https://github.com/webpack-contrib/less-loader) - Compiles Less to CSS.
 * [raven-js](https://docs.sentry.io/clients/javascript/integrations/vue/) - Sentry’s browser JavaScript SDK.
