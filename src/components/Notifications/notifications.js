@@ -17,7 +17,14 @@ miniToastr.init({ types: toastTypes });
 //   return JSON.stringify(obj)
 // }
 
-function toast({ title, message, type, timeout, consoleMessage, cb }) {
+function toast({
+  title,
+  message,
+  type,
+  timeout,
+  consoleMessage,
+  cb
+}) {
   if (consoleMessage) {
     /* eslint-disable no-console */
     console[type](consoleMessage);

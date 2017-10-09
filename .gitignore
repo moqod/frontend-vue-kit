@@ -1,5 +1,6 @@
 .DS_Store
 node_modules/
+testVue/
 dist/
 testVue/
 npm-debug.log*

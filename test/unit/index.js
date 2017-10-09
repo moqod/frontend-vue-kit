@@ -4,7 +4,7 @@ Vue.config.productionTip = false;
 Vue.config.API_HOST = "'http://site.com/api'";
 
 // require all test files (files that ends with .spec.js)
-const testsContext = require.context('./specs', true, /\.spec$/);
+const testsContext = require.context('../../src', true, /\.spec$/);
 testsContext.keys().forEach(testsContext);
 
 // require all src files except main.js for coverage.

@@ -1,10 +1,12 @@
-import Vue from 'vue';
+import axios from 'axios';
 import app from './../main';
+
+axios.defaults.baseURL = process.env.API_HOST;
+// axios.defaults.headers.common['Authorization'] = AUTH_TOKEN;
 
 export default {
   get({ url, cb }) {
-    Vue
-      .http
+    axios
       .get(url)
       .then((response) => {
         if (response.status !== 200 && response.status !== 201) {
@@ -24,8 +26,7 @@ export default {
       });
   },
   post({ url, data, cb }) {
-    Vue
-      .http
+    axios
       .post(url, data)
       .then((response) => {
         if (response.status !== 200 && response.status !== 201) {
@@ -45,8 +46,7 @@ export default {
       });
   },
   put({ url, data, cb }) {
-    Vue
-      .http
+    axios
       .put(url, data)
       .then((response) => {
         if (response.status !== 200 && response.status !== 201) {
@@ -66,8 +66,7 @@ export default {
       });
   },
   delete({ url, cb }) {
-    Vue
-      .http
+    axios
       .delete(url)
       .then((response) => {
         if (response.status !== 200 && response.status !== 201) {
