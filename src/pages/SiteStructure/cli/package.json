@@ -1,0 +1,32 @@
+{
+  "name": "vue-site-generate",
+  "version": "1.0.0",
+  "description": "Generate your site",
+  "main": "generate.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "rm -rf dist && ./node_modules/gulp/bin/gulp.js build",
+    "start": "gulp build",
+    "g": "npm start && node ./dist/init.js"
+  },
+  "keywords": [
+    "vue",
+    "generate"
+  ],
+  "bin": {
+    "vsg": "./dist/init.js"
+  },
+  "author": "Yurii Dunaev",
+  "license": "ISC",
+  "dependencies": {
+    "command-line-args": "^4.0.7",
+    "fs-extra": "^4.0.2",
+    "swig": "^1.4.2"
+  },
+  "devDependencies": {
+    "babel-preset-env": "^1.6.0",
+    "gulp": "^3.9.1",
+    "gulp-babel": "^7.0.0",
+    "run-sequence": "^2.2.0"
+  }
+}
