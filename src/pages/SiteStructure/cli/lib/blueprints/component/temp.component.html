@@ -1,0 +1,5 @@
+<section class="{{data.name | kebabCase}}">
+  <h1>{{data.name | kebabCase}} Component</h1>
+  {% for component in data.components %}
+  <{{components[component].name}}></{{components[component].name}}>{% endfor %}
+</section>

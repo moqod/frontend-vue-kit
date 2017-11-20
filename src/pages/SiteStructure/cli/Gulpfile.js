@@ -12,11 +12,11 @@ gulp.task('dev', function() {
 });
 
 gulp.task('copy', function() {
-    // gulp.src('./lib/blueprints/**/**', {
-    //         base: "./lib"
-    //     })
-    //     .pipe(gulp.dest('./dist'));
-    //
+    gulp.src('./lib/blueprints/**/**', {
+            base: "./lib"
+        })
+        .pipe(gulp.dest('./dist'));
+
     // gulp.src('./lib/config/config.json')
     //     .pipe(gulp.dest('./dist/config'));
 });

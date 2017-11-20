@@ -1,0 +1,5 @@
+{
+  "scripts": {
+    "g": "cd cli && npm start && node ./dist/init.js"
+  }
+}

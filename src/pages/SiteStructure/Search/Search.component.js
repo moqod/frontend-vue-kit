@@ -3,7 +3,7 @@ export default  {
   props: {
     placeholder: String,
     data: {
-      type: Array,
+      type: Object,
       required: true
     },
     trackBy: {
@@ -42,9 +42,15 @@ export default  {
     },
 
     search(value) {
-      this.foundItems = this.data.filter((item) => {
-        return item[this.trackBy].toLowerCase().search(value) !== -1;
-      });
+      const { data } = this;
+      const ids = Object.keys(data);
+
+      this.foundItems = ids.reduce((prev, item) => {
+        if (data[item][this.trackBy].toLowerCase().search(value) !== -1) {
+          prev.push(data[item]);
+        }
+        return prev;
+      }, []);
     },
 
     onUp() {
@@ -70,7 +76,7 @@ export default  {
       const { search } = this.$refs;
       
       if (this.selectedItemName) {
-        item = this.selectedItem.name === this.selectedItemName ? this.selectedItem : this.selectedItemName;
+        item = this.foundItems.find(item => item.name.toLowerCase() === this.selectedItemName) || this.selectedItemName;
       } else {
         item = search.value;
       }

@@ -1,9 +1,9 @@
 class PageTemplate {
   constructor( item ) {
-    this.component = 'component';
+    this.type = 'component';
     this.name = item.name;
+    this.components = item.components;
     this.folder = 'components';
-    this.src = `./components/${this.name}/`;
   }
 }
 

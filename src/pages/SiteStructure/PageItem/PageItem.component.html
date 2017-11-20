@@ -1,0 +1,16 @@
+<div class="page-item">
+  <input type="text" v-model="page.name" autofocus>
+  <input type="text" v-model="page.pageUrl">
+  <h3>Components:</h3>
+  <section
+      v-for="(component, index) in getPageComponents(page.components)"
+  >
+    <input type="text" readonly v-model="component.name">
+  </section>
+  <Search
+      :data="components"
+      placeholder="Component"
+      trackBy="name"
+      @onSelected="onSelected($event, page)"
+  ></Search>
+</div>

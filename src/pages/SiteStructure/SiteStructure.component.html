@@ -8,21 +8,11 @@
       </button>
     </div>
     <div class="page" v-for="(page, index) in siteStructure.pages">
-      <div class="page__item">
-        <input type="text" v-model="page.name" autofocus>
-        <h3>Components:</h3>
-        <section
-            v-for="(component, index) in getPageComponents(page.components)"
-        >
-          <input type="text" readonly v-model="component.name">
-        </section>
-        <Search
-            :data="siteStructure.components"
-            placeholder="Component"
-            trackBy="name"
-            @onSelected="onSelected($event, page)"
-        ></Search>
-      </div>
+      <PageItem
+          :page="page"
+          :onSelected="onSelected"
+          :components="siteStructure.components"
+      ></PageItem>
       <div class="page__components">
         <div
             class="page__component"

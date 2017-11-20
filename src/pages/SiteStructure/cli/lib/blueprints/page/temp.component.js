@@ -1,4 +1,4 @@
-{% for component in data.components %}import {{components[component].name}} from './../{{components[component].name}}/index';
+{% for component in data.components %}import {{components[component].name}} from './../../components/{{components[component].name}}/index';
 {% endfor %}
 export default  {
   name: '{{data.name | kebabCase}}',

@@ -1,5 +1,5 @@
 import nanoid from 'nanoid';
-import Search from './Search/index';
+import PageItem from './PageItem/index';
 
 export default  {
   name: 'site-structure',
@@ -19,10 +19,11 @@ export default  {
         pages: [
           {
             name: 'PageName',
+            pageUrl: '/',
             components: []
           }
         ],
-        components: [],
+        components: {},
         store: []
       }
     }
@@ -38,15 +39,15 @@ export default  {
     onAddComponent(page, name) {
       const id = nanoid();
 
-      this.siteStructure.components.push({
+      this.siteStructure.components[id] = {
         id: id,
         name: name || 'ComponentName'
-      });
+      };
       
       page.components.push(id);
     },
     getPageComponents(ids) {
-      return this.siteStructure.components.filter(item => ids.indexOf(item.id) !== -1)
+      return ids.map(id => this.siteStructure.components[id]);
     },
     onSelected(item, page) {
       if (typeof item === 'string') {
@@ -71,6 +72,6 @@ export default  {
 
   },
   components: {
-    Search
+    PageItem
   }
 }
