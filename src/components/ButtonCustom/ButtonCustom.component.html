@@ -1,0 +1,11 @@
+<div class="button-custom_wrapper">
+  <button
+    class="button-custom"
+    :class="{ disabled }"
+    :disabled="disabled"
+    @click="onButtonClick"
+  >
+    {{isLoading ? '...' : label}}
+  </button>
+</div>
+

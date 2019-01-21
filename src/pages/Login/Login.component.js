@@ -1,8 +1,11 @@
-export default  {
+import ButtonCustom from '@/components/ButtonCustom/index';
+
+export default {
   name: 'login',
   data() {
     return {
-      msg: 'Welcome to Your Vue.js App'
+      msg: 'Welcome to Your Vue.js App',
+      isLoading: false,
     };
   },
   head: {
@@ -18,6 +21,16 @@ export default  {
   },
   created() {
     this.$store.dispatch('loginUser');
+  },
+  components: {
+    ButtonCustom
+  },
+  methods: {
+    onButtonClick: function(e) {
+      console.log('click', e);
+      this.isLoading = true;
+      setTimeout(() => this.isLoading = false, 2000);
+    }
   }
 };
 
