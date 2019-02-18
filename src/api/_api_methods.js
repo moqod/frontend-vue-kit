@@ -1,89 +1,85 @@
-import Vue from 'vue';
-import app from './../main';
+import Vue from 'vue'
+import app from './../main'
 
 export default {
   get({ url, cb }) {
-    Vue
-      .http
+    return Vue.http
       .get(url)
-      .then((response) => {
+      .then(response => {
         if (response.status !== 200 && response.status !== 201) {
-          return false;
+          return false
         }
-        return response.data;
+        return response.data
       })
-      .then((json) => {
-        cb(json);
+      .then(json => {
+        cb(json)
       })
-      .catch((ex) => {
+      .catch(ex => {
         app.showServerError({
           message: ex,
           consoleMessage: ex
-        });
-        cb(null);
-      });
+        })
+        cb(null)
+      })
   },
   post({ url, data, cb }) {
-    Vue
-      .http
+    return Vue.http
       .post(url, data)
-      .then((response) => {
+      .then(response => {
         if (response.status !== 200 && response.status !== 201) {
-          return false;
+          return false
         }
-        return response.data;
+        return response.data
       })
-      .then((json) => {
-        cb(json);
+      .then(json => {
+        cb(json)
       })
-      .catch((ex) => {
+      .catch(ex => {
         app.showServerError({
           message: ex,
           consoleMessage: ex
-        });
-        cb(null);
-      });
+        })
+        cb(null)
+      })
   },
   put({ url, data, cb }) {
-    Vue
-      .http
+    return Vue.http
       .put(url, data)
-      .then((response) => {
+      .then(response => {
         if (response.status !== 200 && response.status !== 201) {
-          return false;
+          return false
         }
-        return response.data;
+        return response.data
       })
-      .then((json) => {
-        cb(json);
+      .then(json => {
+        cb(json)
       })
-      .catch((ex) => {
+      .catch(ex => {
         app.showServerError({
           message: ex,
           consoleMessage: ex
-        });
-        cb(null);
-      });
+        })
+        cb(null)
+      })
   },
   delete({ url, cb }) {
-    Vue
-      .http
+    return Vue.http
       .delete(url)
-      .then((response) => {
+      .then(response => {
         if (response.status !== 200 && response.status !== 201) {
-          return false;
+          return false
         }
-        return response.data;
+        return response.data
       })
-      .then((json) => {
-        cb(json);
+      .then(json => {
+        cb(json)
       })
-      .catch((ex) => {
+      .catch(ex => {
         app.showServerError({
           message: ex,
           consoleMessage: ex
-        });
-        cb(null);
-      });
+        })
+        cb(null)
+      })
   }
-};
+}

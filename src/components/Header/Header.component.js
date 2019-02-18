@@ -1,5 +1,5 @@
 export default  {
-  name: 'header',
+  name: 'header-block',
   props: [
     'phoneNumber'
   ],

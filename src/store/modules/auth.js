@@ -1,52 +1,40 @@
-import user from '../../api/user';
-import * as types from '../mutation-types';
-
-// initial state
-const state = {
-  userItem: false
-};
-
-// getters
-const getters = {
-  userInfo: () => state.userItem,
-  userLoading: () => state.loading
-};
-
-// actions
-const actions = {
-  loginUser({ commit }, form) {
-    commit(types.LOADING);
-    user.login(form, (item) => {
-      if (item) {
-        commit(types.RECEIVE_USER, { item });
-        commit(types.SET_AUTHORIZED_TRUE);
-      }
-      commit(types.LOADED);
-      return item;
-    });
-  },
-  logoutUser({ commit }, id) {
-    user.logout((item) => {
-      commit(types.LOGOUT_USER, { item });
-      commit(types.SET_AUTHORIZED_FALSE);
-      return null;
-    }, id);
-  }
-};
-
-// mutations
-const mutations = {
-  [types.LOGOUT_USER](type, { item }) {
-    state.userItem = item;
-  },
-  [types.RECEIVE_USER](type, { item }) {
-    state.userItem = item;
-  }
-};
-
+import user from '../../api/user'
 export default {
-  state,
-  getters,
-  actions,
-  mutations
+  state: {
+    userItem: false
+  },
+  getters: {
+    userInfo: () => state.userItem,
+    userLoading: () => state.loading,
+    isAuthenticated(state) {
+      return !!state.userItem;
+    }
+  },
+  actions: {
+    loginUser({ commit }, form) {
+      commit('USER_LOADING', true)
+      user.login(form, item => {
+        if (item) {
+          commit('SET_USER', { item })
+        }
+        commit('USER_LOADING', false)
+        return item
+      })
+    },
+    logoutUser({ commit }, id) {
+      user.logout(() => {
+        commit('SET_USER', false)
+        return null
+      }, id)
+    }
+  },
+  mutations: {
+    SET_USER(state, payload) {
+      state.user = payload;
+    },
+    USER_LOADING(state, payload) {
+      state.user_loading = payload;
+    }
+  }
 };
+
