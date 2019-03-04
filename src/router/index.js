@@ -1,19 +1,19 @@
-import Vue from 'vue';
-import Router from 'vue-router';
-import VueHead from 'vue-head';
-import Login from '@/pages/Login/index';
-import Main from '@/pages/Main/index';
+import Vue from 'vue'
+import Router from 'vue-router'
+import VueHead from 'vue-head'
+import Login from '@/pages/Login/index'
+import Main from '@/pages/Main/index'
 
-Vue.use(VueHead);
-Vue.use(Router);
+Vue.use(VueHead)
+Vue.use(Router)
 
 function requireAuth(to, from, next) {
   if (!localStorage.getItem('token')) {
     next({
       path: '/login'
-    });
+    })
   } else {
-    next();
+    next()
   }
 }
 
@@ -32,4 +32,4 @@ export default new Router({
       component: Login
     }
   ]
-});
+})

@@ -1,6 +1,0 @@
-export const LOADING = 'LOADING';
-export const LOADED = 'LOADED';
-export const RECEIVE_USER = 'RECEIVE_USER';
-export const LOGOUT_USER = 'LOGOUT_USER';
-export const SET_AUTHORIZED_TRUE = 'SET_AUTHORIZED_TRUE';
-export const SET_AUTHORIZED_FALSE = 'SET_AUTHORIZED_FALSE';

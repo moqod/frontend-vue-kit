@@ -1,24 +1,27 @@
 <template>
-  <div id="app" class="app">
-    <HeaderBlock></HeaderBlock>
+  <div
+    id="app"
+    class="app"
+  >
+    <HeaderBlock />
     <div class="main">
-      <router-view></router-view>
+      <router-view />
     </div>
-    <FooterBlock></FooterBlock>
+    <FooterBlock />
   </div>
 </template>
 
 <script>
-  import Header from './components/Header/index';
-  import Footer from './components/Footer/index';
+import Header from './components/Header/index'
+import Footer from './components/Footer/index'
 
-  export default {
-    name: 'app',
-    components: {
-      HeaderBlock: Header,
-      FooterBlock: Footer
-    }
-  };
+export default {
+  name: 'App',
+  components: {
+    HeaderBlock: Header,
+    FooterBlock: Footer
+  }
+}
 </script>
 
 <style src="./App.less" scoped lang="less"></style>

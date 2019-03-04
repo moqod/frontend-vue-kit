@@ -1,16 +1,16 @@
 export default  {
-  name: 'footer',
+  name: 'footer-block',
   props: [],
   mounted() {
-    
+
   },
   data() {
     return {
-      
+
     }
   },
   methods: {
-   
+
   },
   computed: {
 
